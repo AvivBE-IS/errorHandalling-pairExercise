@@ -1,0 +1,8 @@
+  "name": "Aviv",
+  "age": 25,
+  "isStudent": false,
+  "skills": ["JavaScript", "Python", "Node.js"],
+  "address": {
+    "city": "Tel Aviv",
+    "zip": "12345"
+  }
