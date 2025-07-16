@@ -1,17 +1,18 @@
-console.log(safeJsonParse('{"name": "John"}')); 
-// Output: { name: "John" }
-
-console.log(safeJsonParse('invalid json')); 
-// Output: "Invalid JSON format"
 
 
-function safeParseJSON(jsonString) {
+function safeJsonParse(jsonString) {
   try {
-    const parsed = JSON.parse(jsonString);
-    return { success: true, data: parsed };
+    return JSON.parse(jsonString);
   } catch (err) {
-    return { success: false, error: `Invalid JSON: ${err.message}` };
+    return "Invalid JSON format";
   }
 }
 
-module.exports = { safeParseJSON };
+// בדיקות
+console.log(safeJsonParse('{"name": "John"}'));
+// ➜ { name: 'John' }
+
+console.log(safeJsonParse('invalid json'));
+// ➜ "Invalid JSON format"
+
+
